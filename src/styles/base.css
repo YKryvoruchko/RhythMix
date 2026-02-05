@@ -1,13 +1,28 @@
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    'IBM Plex Sans',
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --font-base: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-title: 'Epilogue', 'Roboto', sans-serif;
+
+  --bg: #060307;
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.75);
+  --accent: #764191;
+  --accent-hover: #764191;
+  --section-py: 16px;
+  --section-py-lg: 64px;
+  --radius-lg: 16px;
+
+  color: #ffffff;
+  background-color: #060307;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,12 +31,22 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: var(--font-base);
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  background: var(--bg);
+  color: var(--text);
 }
 
 main {
@@ -29,4 +54,145 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+a,
+p {
+  margin: 0 0 12px 0;
+  color: var(--text-muted);
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 44px;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+h5 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+h6 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+a {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 84px;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  h4 {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  h5 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  a {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+.section {
+  padding: var(--section-py) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: var(--section-py-lg);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 47px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
 }
