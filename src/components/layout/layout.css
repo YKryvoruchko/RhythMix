@@ -1,0 +1,41 @@
+.loyout-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #060307;
+    padding: 64px 16px;
+    width: 320px;
+    height: 716px;
+}
+.about {
+    background: #060307;
+    color: #ffffff;
+}
+
+.about-inner {
+    width: 320px;
+    padding: 64px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.about-title {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.2;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.about-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    color: #fff;
+}
