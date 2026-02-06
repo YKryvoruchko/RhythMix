@@ -8,22 +8,9 @@ export function createArtistCard(artist) {
 
   card.innerHTML = `
     <div class="artist-card__image">
-      <img src="${artist.strArtistThumb || ''}" alt="${artist.strArtist || ''}" />
-    </div>
-
-
-const artistsList = document.getElementById("artists-list");
-
-
-export function createArtistCard(artist) {
-  const card = document.createElement("div");
-  card.className = "artist-card";
-
-  card.innerHTML = `
-    <div class="artist-card__image">
-      <img
-        src="${artist.strArtistThumb || "https://via.placeholder.com/640x393"}"
-        alt="${artist.strArtist || "Artist"}"
+      <img 
+        src="${artist.strArtistThumb || ''}" 
+        alt="${artist.strArtist || ''}" 
       />
     </div>
 
@@ -37,7 +24,9 @@ export function createArtistCard(artist) {
           .join('')}
       </div>
 
-      <h3 class="artist-card__name">${artist.strArtist || ''}</h3>
+      <h3 class="artist-card__name">
+        ${artist.strArtist || ''}
+      </h3>
 
       <p class="artist-card__description">
         ${artist.strBiographyEN || ''}
