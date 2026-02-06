@@ -1,0 +1,154 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.feedback {
+  position: relative;
+}
+
+.feedback__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.feedback-swiper {
+  width: 100%;
+  max-width: 288px;
+}
+
+.feedback .swiper-wrapper {
+  align-items: center;
+}
+
+.feedback .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  color: var(--text);
+}
+
+.feedback-rating {
+  display: flex;
+  justify-content: center;
+}
+
+.feedback-rating .star {
+  width: 20px;
+  height: 20px;
+}
+
+.feedback-rating .star i {
+  color: #764191 !important;
+}
+
+.feedback-rating .star svg {
+  fill: #764191;
+}
+
+.feedback-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.feedback-author {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.feedback-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.feedback-pagination .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.feedback-pagination .dot.is-active {
+  background: #ffffff;
+}
+
+.feedback-arrow {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.feedback-arrow:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.feedback-arrow .icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .feedback-swiper {
+    max-width: 640px;
+  }
+
+  .feedback-arrow {
+    display: inline-flex;
+  }
+
+  .feedback-arrow--prev {
+    position: absolute;
+    left: 0;
+  }
+
+  .feedback-arrow--next {
+    position: absolute;
+    right: 0;
+  }
+
+  .feedback-pagination {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feedback-swiper {
+    max-width: 866px;
+    max-height: 236px;
+  }
+
+  .feedback-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .feedback-arrow .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
