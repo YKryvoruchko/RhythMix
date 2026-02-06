@@ -1,14 +1,26 @@
 .artists {
-padding-top: 112px;
+    background: #2E2E2E;
+}
+.artists__container {
+    max-width: 1440px;
+    padding: 112px 64px;
+    margin: 0 auto;
 }
 .artists__title {
-margin-bottom: 16px;
-font-size: 16px;
-color: #FFFFFF;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.8);
 }
 .artists__subtitle {
-margin-bottom: 48px;
-font-size: 60px;
+    margin-bottom: 64px;
+    font-weight: 700;
+    font-size: 60px;
+    max-width: 640px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
 }
 .artists__list {
     display: grid;
@@ -29,17 +41,25 @@ font-size: 60px;
     overflow: hidden;
     background: #0b0b0b;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.artist-card__name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 8px;
 }
     .artist-card__content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     padding: 24px;
 }
 .artist-card__genres {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    margin-bottom: 16px;
 }
 
 .artist-card__genre {
@@ -50,14 +70,27 @@ font-size: 60px;
     border-radius: 8px;
     color: rgba(255, 255, 255, 0.8);
 }
+.artist-card__description {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
 .artist-card__link {
+    margin-top: auto;
     align-self: flex-start;
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: transparent;
     color: #fff;
     font-size: 14px;
     line-height: 20px;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 0;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.artist-card__icon {
+    display: block;
+    transform: translateY(1px);
 }
