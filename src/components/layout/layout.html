@@ -1,23 +1,53 @@
 <section class="about">
-  <div class="about-inner">
-    <img
-      src="/src/img/loyout/layout-m1.jpg"
-      alt="ArtistsHub team"
-      class="about-team"
-    />
+  <div class="container about-inner">
+    <div class="about-image">
+      <picture>
+        <source
+          srcset="
+            /src/img/layout/layout-c1.jpg    1x,
+            /src/img/layout/layout-c1@2x.jpg 2x
+          "
+          media="(min-width: 1280px)"
+        />
 
-    <div class="about-logo">
-      <svg width="64" height="64">
-        <use href=""></use>
-      </svg>
+        <source
+          srcset="
+            /src/img/layout/layout-p1.jpg    1x,
+            /src/img/layout/layout-p1@2x.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="
+            /src/img/layout/layout-m1.jpg    1x,
+            /src/img/layout/layout-m1@2x.jpg 2x
+          "
+          media="(max-width: 767px)"
+        />
+
+        <img
+          src="/src/img/layout/layout-m1.jpg"
+          alt="ArtistsHub team"
+          class="about-team"
+        />
+      </picture>
     </div>
 
-    <h2 class="about-title">About ArtistsHub</h2>
+    <div class="about-content">
+      <div class="about-logo">
+        <svg class="about-logo-icon">
+          <use href="/src/img/loyout/logo-icon.svg#logo"></use>
+        </svg>
+      </div>
 
-    <p class="about-text">
-      At ArtistsHub, our mission is to connect music lovers with the artists
-      they adore. We strive to create a vibrant community where discovering new
-      music is as enjoyable as listening to it.
-    </p>
+      <h2 class="about-title">About ArtistsHub</h2>
+
+      <p class="about-text">
+        At ArtistsHub, our mission is to connect music lovers with the artists
+        they adore. We strive to create a vibrant community where discovering
+        new music is as enjoyable as listening to it.
+      </p>
+    </div>
   </div>
 </section>
