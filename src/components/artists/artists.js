@@ -1,3 +1,4 @@
+import './artists.css';
 const artistsList = document.querySelector('#artists-list');
 
 console.log('artistsList:', artistsList);
