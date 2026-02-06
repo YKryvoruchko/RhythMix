@@ -46,13 +46,11 @@ class ArtistsSection {
       
       const data = await response.json();
       
-      // API може повертати об'єкт з масивом artists або просто масив
       if (Array.isArray(data)) {
         this.allArtists = data;
       } else if (data && Array.isArray(data.artists)) {
         this.allArtists = data.artists;
       } else if (data && typeof data === 'object') {
-        // Якщо це об'єкт, беремо всі значення як масив
         this.allArtists = Object.values(data);
       } else {
         this.allArtists = [];
@@ -139,7 +137,6 @@ class ArtistsSection {
       </div>
     `;
 
-    // Додаємо обробник для кнопки Learn More
     const learnMoreBtn = card.querySelector('[data-learn-more]');
     if (learnMoreBtn) {
       learnMoreBtn.addEventListener('click', () => {
@@ -205,7 +202,6 @@ class ArtistsSection {
   }
 }
 
-// Ініціалізація при завантаженні DOM
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     new ArtistsSection();

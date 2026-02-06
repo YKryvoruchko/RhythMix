@@ -13,19 +13,10 @@ class ArtistModal {
   initElements() {
     if (this.initialized) return;
     
-    console.log('Initializing modal elements...');
-    
     this.backdrop = document.querySelector('[data-modal-backdrop]');
     this.closeBtn = document.querySelector('[data-modal-close]');
     this.loader = document.querySelector('[data-loader]');
     this.content = document.querySelector('.artist-modal-content');
-    
-    console.log('Modal elements:', {
-      backdrop: this.backdrop,
-      closeBtn: this.closeBtn,
-      loader: this.loader,
-      content: this.content
-    });
     
     this.elements = {
       image: document.querySelector('[data-artist-image]'),
@@ -62,11 +53,9 @@ class ArtistModal {
   }
 
   async open(artistId) {
-    console.log('Opening modal for artist:', artistId);
     this.initElements();
     
     if (!this.backdrop) {
-      console.error('Modal backdrop not found!');
       return;
     }
 
@@ -76,9 +65,7 @@ class ArtistModal {
     this.showLoader();
     
     try {
-      console.log('Fetching artist data...');
       const data = await this.fetchArtistData(artistId);
-      console.log('Artist data received:', data);
       this.renderArtistData(data);
       this.hideLoader();
     } catch (error) {
@@ -110,10 +97,8 @@ class ArtistModal {
 
   async fetchArtistData(artistId) {
     const url = `${API_BASE_URL}/artists/${artistId}/albums`;
-    console.log('Fetching from URL:', url);
     
     const response = await fetch(url);
-    console.log('Response status:', response.status);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -124,32 +109,25 @@ class ArtistModal {
   }
 
   renderArtistData(data) {
-    console.log('Rendering artist data...');
-    
     if (!data) {
-      console.error('No data to render');
       return;
     }
 
     try {
-      // Зображення виконавця
       if (this.elements.image) {
         this.elements.image.src = data.strArtistThumb || '';
         this.elements.image.alt = data.strArtist || 'Artist';
       }
 
-      // Назва виконавця
       if (this.elements.name) {
         this.elements.name.textContent = data.strArtist || '';
       }
 
-      // Роки існування
       if (this.elements.years) {
         const yearsActive = this.formatYearsActive(data.intFormedYear, data.intDiedYear);
         this.elements.years.textContent = yearsActive;
       }
 
-      // Стать (для виконавців-осіб)
       if (this.elements.sex) {
         const sexDetail = this.elements.sex.closest('.artist-modal-meta-item');
         if (data.strGender && sexDetail) {
@@ -160,7 +138,6 @@ class ArtistModal {
         }
       }
 
-      // Кількість учасників (для груп)
       if (this.elements.members) {
         const membersDetail = this.elements.members.closest('.artist-modal-meta-item');
         if (data.intMembers && membersDetail) {
@@ -171,27 +148,21 @@ class ArtistModal {
         }
       }
 
-      // Країна походження
       if (this.elements.country) {
         this.elements.country.textContent = data.strCountry || '';
       }
 
-      // Жанри
       if (this.elements.genres) {
         this.renderGenres(data.genres);
       }
 
-      // Історія виконавця або групи (Біографія)
       if (this.elements.biography) {
         this.elements.biography.textContent = data.strBiographyEN || '';
       }
 
-      // Список альбомів
       if (this.elements.albumsList) {
         this.renderAlbums(data.albumsList);
       }
-      
-      console.log('Rendering complete!');
     } catch (error) {
       console.error('Error during rendering:', error);
     }
@@ -225,7 +196,6 @@ class ArtistModal {
     const albumsHTML = albums.map(album => this.createAlbumHTML(album)).join('');
     this.elements.albumsList.innerHTML = albumsHTML;
 
-    // Додаємо обробники для кнопок YouTube
     this.attachYouTubeListeners();
   }
 
@@ -289,8 +259,6 @@ class ArtistModal {
   }
 }
 
-// Експортуємо для використання в інших модулях
 export default ArtistModal;
 
-// Створюємо екземпляр для використання
 export const artistModal = new ArtistModal();
