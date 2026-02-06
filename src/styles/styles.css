@@ -8,17 +8,18 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('../components/header/header.css');
+@import url('../components/hero/hero.css');
+@import url('../components/artists/artists.css');
+@import url('../components/feedback/feedback.css');
+@import url('../components/footer/footer.css');
+@import url('../components/artist-modal/artist-modal.css');
+@import url('../components/layout/layout.css');
 
 /* бібліотеки  */
-@import 'swiper/css';
+/* @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
-@import 'css-star-rating/css/star-rating.css';
+@import 'css-star-rating/css/star-rating.css'; */

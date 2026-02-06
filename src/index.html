@@ -1,17 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RhythMix</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Epilogue:wght@700&family=Roboto:wght@700&display=swap"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <load src="/components/header/header.html" icon-path="img/sprite.svg#logo" />
+    <load
+      src="/components/header/header.html"
+      icon-path="img/sprite.svg#logo"
+    />
 
     <main>
-
       <load src="/components/hero/hero.html" />
       <load src="/components/artists/artists.html" />
       <load src="/components/artist-modal/artist-modal.html" />
@@ -20,7 +28,7 @@
       <load src="/components/footer/footer.html" />
     </main>
 
-
+    
     <script type="module" src="./main.js"></script>
   </body>
 </html>

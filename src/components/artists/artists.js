@@ -1,3 +1,21 @@
+import './artists.css';
+const artistsList = document.querySelector('#artists-list');
+
+console.log('artistsList:', artistsList);
+const testArtist = {
+  name: 'Ren',
+  image: '../../img/ren.png',
+  genres: ['Alternative', 'Pop', 'Rock', 'Indie'],
+  description:
+    'Ren Eryn Gill, known professionally as Ren, is a multi-award-winning Welsh singer-songwriter...',
+};
+
+function createArtistCard(artist) {
+  return `
+    <div class="artist-card">
+      <div class="artist-card__image">
+        <img src="${artist.image}" alt="${artist.name}">
+      </div>
 
 
 const artistsList = document.getElementById("artists-list");
