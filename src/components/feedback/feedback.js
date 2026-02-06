@@ -26,7 +26,6 @@ async function initFeedback() {
     initSwiper();
   } catch (error) {
     renderError('Failed to load feedbacks.');
-    // eslint-disable-next-line no-console
     console.error(error);
   }
 }
