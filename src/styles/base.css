@@ -17,8 +17,8 @@
   --text-muted: rgba(255, 255, 255, 0.75);
   --accent: #764191;
   --accent-hover: #764191;
-  --section-py: 16px;
-  --section-py-lg: 64px;
+  --section-py: 64px;
+  --section-py-lg: 112px;
   --radius-lg: 16px;
 
   color: #ffffff;
@@ -126,7 +126,7 @@ a {
   line-height: 1.5;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   h1 {
     font-size: 84px;
     line-height: 1.1;
@@ -168,11 +168,11 @@ a {
 
 @media (min-width: 768px) {
   .section {
-    padding: 32px 0;
+    padding: var(--section-py);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .section {
     padding: var(--section-py-lg);
   }
