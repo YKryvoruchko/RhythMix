@@ -1,0 +1,124 @@
+<!--------- ARTIST MODAL BACKDROP --------->
+<div class="artist-modal-backdrop is-hidden-modal" data-modal-backdrop>
+    
+    <!----- ARTIST MODAL ----->
+    <div class="artist-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="artist-modal-title"
+         tabindex="-1"
+         data-artist-modal
+        >
+        <!----- ARTIST MODAL CLOSE BUTTON ----->
+        <button
+             type="button"
+             class="artist-modal-close"
+             aria-label="Close artist details"
+             data-modal-close
+            >
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.866 13.3946L13.3945 13.866C13.1342 14.1263 12.7121 14.1263 12.4517 13.866L7.03064 8.44484L1.60944 13.8659C1.34914 14.1263 0.927022 14.1263 0.666672 13.8659L0.195262 13.3945C-0.0650875 13.1342 -0.0650875 12.7121 0.195262 12.4517L5.61644 7.03064L0.195262 1.60944C-0.0650875 1.34914 -0.0650875 0.927022 0.195262 0.666672L0.666662 0.195272C0.927012 -0.065078 1.34914 -0.065078 1.60944 0.195272L7.03064 5.61644L12.4517 0.195262C12.7121 -0.0650875 13.1342 -0.0650875 13.3945 0.195262L13.866 0.666662C14.1263 0.927012 14.1263 1.34914 13.866 1.60944L8.44484 7.03064L13.866 12.4517C14.1263 12.7121 14.1263 13.1342 13.866 13.3946Z" fill="white" />
+            </svg>
+        </button>
+        
+        <!----- ARTIST MODAL HEADER ----->
+        <div class="artist-modal-header">
+           <p class="artist-modal-title" id="artist-modal-title">
+              Artist Name
+           </p>
+        </div>
+
+        <!----- ARTIST MODAL MAIN CONTENT ----->
+        <div class="artist-modal-content">
+            
+            <!--- ARTIST MODAL IMAGE --->
+            <div class="artist-modal-image-wrapper">
+               <img
+                  src=""
+                  alt="Artist modal photo"
+                  class="artist-modal-image"
+                  data-artist-image
+               />
+            </div>
+            
+            <!--- ARTIST MODAL META --->
+            <div>
+                <ul class="artist-modal-meta">
+                    <li class="artist-modal-meta-item">
+                        <span class="artist-modal-meta-label">Years active:</span>
+                        <span class="artist-modal-meta-value" data-artist-years>
+                          information missing
+                        </span>
+                    </li>
+
+                    <li class="artist-modal-meta-item">
+                        <span class="artist-modal-meta-label">Gender:</span>
+                        <span class="artist-modal-meta-value" data-artist-gender></span>
+                    </li>
+
+                    <li class="artist-modal-meta-item">
+                        <span class="artist-modal-meta-label">Members:</span>
+                        <span class="artist-modal-meta-value" data-artist-members></span>
+                    </li>
+
+                    <li class="artist-modal-meta-item">
+                        <span class="artist-modal-meta-label">Country:</span>
+                        <span class="artist-modal-meta-value" data-artist-country></span>
+                    </li>
+                </ul>
+
+                <!--- ARTIST MODAL BIOGRAPHY --->
+                <div class="artist-modal-bio">
+                    <p class="artist-modal-bio_title">Biography</p>
+                    <p class="artist-modal-bio_text" data-artist-bio></p>
+                </div>
+                
+                <!--- ARTIST MODAL GENRES --->
+                <div class="artist-modal-genres">
+                    <p class="artist-modal-genres-title">Genres</p>
+                    <ul class="artist-modal-genres-list" data-artist-genres>
+                        <li class="artist-modal-genres-item">Rock</li>
+                    </ul>
+                </div>                
+                                
+            </div>
+            <!--- ARTIST MODAL ALBUMS --->
+            <div class="artist-modal-albums" data-artist-albums>
+                
+                <!--- ARTIST MODAL ALBUM --->
+                <div class="modal-album">
+                    <p class="modal-album-title">Album title</p>
+
+                    <div class="modal-album-tracks">
+                        <div class="modal-album-tracks-header">
+                            <span>Track</span>
+                            <span>Time</span>
+                            <span>Link</span>
+                        </div>
+
+                        <ul class="modal-album-tracks-list">
+                            <li class="modal-album-track">
+                                <span class="modal-album-track-name">Track name</span>
+                                <span class="modal-album-track-duration">3:45</span>
+
+                                <a href="#"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="modal-album-track-youtube"
+                                   aria-label="Open on YouTube">
+                                
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M21.5933 7.20301C21.4794 6.78041 21.2568 6.39501 20.9477 6.08518C20.6386 5.77534 20.2537 5.55187 19.8313 5.43701C18.2653 5.00701 12.0003 5.00001 12.0003 5.00001C12.0003 5.00001 5.73633 4.99301 4.16933 5.40401C3.74725 5.52415 3.36315 5.75078 3.0539 6.06214C2.74464 6.3735 2.52062 6.75913 2.40333 7.18201C1.99033 8.74801 1.98633 11.996 1.98633 11.996C1.98633 11.996 1.98233 15.26 2.39233 16.81C2.62233 17.667 3.29733 18.344 4.15533 18.575C5.73733 19.005 11.9853 19.012 11.9853 19.012C11.9853 19.012 18.2503 19.019 19.8163 18.609C20.2388 18.4943 20.6241 18.2714 20.934 17.9622C21.2439 17.653 21.4677 17.2682 21.5833 16.846C21.9973 15.281 22.0003 12.034 22.0003 12.034C22.0003 12.034 22.0203 8.76901 21.5933 7.20301ZM9.99633 15.005L10.0013 9.00501L15.2083 12.01L9.99633 15.005Z" fill="white" />
+                                   </svg>
+                                </a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>        
+
+        </div>
+    </div>
+</div>
