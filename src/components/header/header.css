@@ -1,7 +1,16 @@
 .header {
-  background: #0b0b0f;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #020202;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 .header-navigation {
   max-width: 1440px;
@@ -12,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
 }
 
 .header-logo {
@@ -20,13 +28,14 @@
   align-items: center;
   text-decoration: none;
   color: #fff;
+  margin: 0;
 }
 
 .header-logo-icon {
   display: block;
-  width: 119px;
-  height: 51px;
-  color: #fff; 
+  width: 106px;
+  height: 31px;
+  color: #fff;
 }
 
 .header-navigation-list {
@@ -55,3 +64,131 @@
   outline: none;
 }
 
+.burger,
+.mobile-menu,
+.mobile-navigation {
+  display: none;
+}
+
+/* мобільна */
+@media (max-width: 480px) {
+  .header-navigation {
+    height: 72px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ховає меню */
+  .header-navigation-list {
+    display: none;
+  }
+
+  /* показуєи бургер */
+  .burger {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .burger-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    color: #fff;
+    fill: currentColor;
+  }
+
+  /* оверлей (закритий) */
+  .mobile-menu,
+  .mobile-navigation {
+    display: none;
+  }
+
+  /* оверлей (відкритий) */
+  .header.is-open .mobile-navigation {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: #0b0b0f;
+    z-index: 50;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* верхня панель оверлея: лого + X */
+  .header.is-open .mobile-menu {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 60;
+
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  /* бургер ховаємо коли меню відкрите */
+  .header.is-open .burger {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-close {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .icon-x {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #fff;
+    fill: currentColor;
+  }
+
+  /* список у центрі */
+  .mobile-navigation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .mobile-navigation-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .mobile-navigation-link:focus-visible,
+  .mobile-navigation-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    outline: none;
+  }
+}
+
+/* блокування скролу коли меню відкрите */
+.no-scroll {
+  overflow: hidden;
+}
