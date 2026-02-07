@@ -20,7 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
 }
 
 .feedback-swiper {
@@ -46,28 +45,58 @@
   justify-content: center;
 }
 
+.feedback-rating .star-container {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
 .feedback-rating .star {
   width: 20px;
   height: 20px;
 }
 
-.feedback-rating .star i {
-  color: #764191  !important;
+.feedback-rating .star i.star-filled::before {
+  content: '★';
+  color: #764191 !important;
 }
 
-.feedback-rating .star svg {
-  fill: #764191;
+.feedback-rating .star i.star-empty::before {
+  content: '★';
+  color: #ffffff !important;
+}
+
+.feedback-rating .star i.star-empty {
+  color: #fff !important;
 }
 
 .feedback-text {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
   color: var(--text);
+  text-align: center;
 }
 
 .feedback-author {
+  font-size: 18px;
+  line-height: 1.5;
   font-weight: 600;
+  text-align: center;
   color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .feedback-text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feedback-text {
+    font-size: 32px;
+    line-height: 1.3;
+  }
 }
 
 .feedback-pagination {
@@ -75,7 +104,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .feedback-pagination .dot {
@@ -98,7 +127,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #ffffff;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .feedback-arrow:hover {
@@ -113,12 +144,18 @@
 }
 
 @media (min-width: 768px) {
+  .feedback__wrapper {
+    padding: 0 93px;
+  }
+
   .feedback-swiper {
     max-width: 640px;
   }
 
   .feedback-arrow {
     display: inline-flex;
+    width: 48px;
+    height: 48px;
   }
 
   .feedback-arrow--prev {
@@ -130,10 +167,6 @@
     position: absolute;
     right: 0;
   }
-
-  .feedback-pagination {
-    margin-top: 32px;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -142,13 +175,13 @@
     max-height: 236px;
   }
 
-  .feedback-arrow {
-    width: 44px;
-    height: 44px;
+  .feedback-pagination {
+    margin-top: 75px;
   }
+}
 
-  .feedback-arrow .icon {
-    width: 18px;
-    height: 18px;
-  }
+.feedback-arrow.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
