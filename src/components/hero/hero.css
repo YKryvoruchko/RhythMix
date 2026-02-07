@@ -1,0 +1,171 @@
+.hero {
+    background-color: #23132B;
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom,
+                rgba(35, 19, 43, 0) 0%,
+                /* Сверху полностью прозрачно */
+                rgba(35, 19, 43, 0.2) 1%,
+                /* Очень легкий оттенок на 20% высоты */
+                rgba(35, 19, 43, 0.8) 10%,
+                /* Начинает густеть только к концу картинок */
+                #23132B 100%
+                /* Полностью плотный фон в самом низу */
+            );
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-content {
+    width: 640px;
+    max-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font: 700 84px / 1.1 "Epilogue", sans-serif;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font: 400 20px / 1.5 "IBM Plex Sans", sans-serif;
+    color: var(--color-white);
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.btn-explore {
+    width: fit-content;
+    padding: 10px 24px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 206px;
+    height: 47px;
+    box-shadow: 0 1px 2px 0 rgba(6, 3, 7, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(6, 3, 7, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+    background: #764191;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-explore:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    position: relative;
+    display: inline-block;
+    position: relative;
+    -webkit-mask-image:
+        linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%);
+    mask-image:
+        linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
+.hero-image img {
+  display: block;
+  width: 641px; 
+  height: 900px; 
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+        .hero {
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-container {
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            min-width: 624px;
+            text-align: left;
+        }
+    
+        .hero-title {
+            font-family: 'Epilogue', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+        
+        .hero-description {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #ffffff;
+            margin-bottom: 32px;
+        }
+        .btn-explore {
+            min-width: 246px;
+        }
+        .hero-image {
+            order: 2;
+        }
+}
+
+@media screen and (max-width: 320px) {
+    .hero-title {
+        font-family: 'Epilogue', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        margin-bottom: 20px;
+        max-width: 288px;
+    }
+
+    .hero-description {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+
+    .hero-content {
+      max-width: 288px;
+    }
+
+    .hero-subtitle {
+       font: 400 18px / 1.5 "IBM Plex Sans", sans-serif;
+       margin-bottom: 24px;
+       max-width: 288px;
+    }
+
+        .btn-explore {
+            min-width: 288px;
+        }
+}
