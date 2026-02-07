@@ -129,9 +129,9 @@ class ArtistModal {
       }
 
       if (this.elements.sex) {
-        const sexDetail = this.elements.sex.closest('.artist-modal-meta-item');
+        const sexDetail = this.elements.sex.closest('.artist-modal-sex-item');
         if (data.strGender && sexDetail) {
-          sexDetail.style.display = 'block';
+          sexDetail.style.display = 'flex';
           this.elements.sex.textContent = data.strGender;
         } else if (sexDetail) {
           sexDetail.style.display = 'none';
@@ -139,9 +139,9 @@ class ArtistModal {
       }
 
       if (this.elements.members) {
-        const membersDetail = this.elements.members.closest('.artist-modal-meta-item');
+        const membersDetail = this.elements.members.closest('.artist-modal-members-item');
         if (data.intMembers && membersDetail) {
-          membersDetail.style.display = 'block';
+          membersDetail.style.display = 'flex';
           this.elements.members.textContent = data.intMembers;
         } else if (membersDetail) {
           membersDetail.style.display = 'none';
@@ -181,7 +181,7 @@ class ArtistModal {
     }
 
     const genresHTML = genres.map(genre => 
-      `<span class="genre-tag">${genre}</span>`
+      `<li class="artist-modal-genres-item">${genre}</li>`
     ).join('');
     
     this.elements.genres.innerHTML = genresHTML;
@@ -203,17 +203,15 @@ class ArtistModal {
     const tracks = album.tracks || [];
     const tracksHTML = tracks.map(track => `
       <div class="track-item">
-        <div class="track-info">
-          <span class="track-title">${track.strTrack || ''}</span>
-          <span class="track-duration">${this.formatDuration(track.intDuration)}</span>
-        </div>
+        <span class="track-title">${track.strTrack || ''}</span>
+        <span class="track-duration">${this.formatDuration(track.intDuration)}</span>
         ${track.movie ? `
-          <button class="youtube-btn" data-youtube-link="${track.movie}" type="button">
-            <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
+          <button class="youtube-btn" data-youtube-link="${track.movie}" type="button" aria-label="Watch on YouTube">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M15.8 4.8C15.8 4.8 15.6 3.4 15 2.8C14.2 2 13.4 2 13 1.9C10.9 1.8 8 1.8 8 1.8C8 1.8 5.1 1.8 3 1.9C2.6 2 1.8 2 1 2.8C0.4 3.4 0.2 4.8 0.2 4.8C0.2 4.8 0 6.4 0 8V9.6C0 11.2 0.2 12.8 0.2 12.8C0.2 12.8 0.4 14.2 1 14.8C1.8 15.6 2.8 15.6 3.2 15.7C4.8 15.8 8 15.9 8 15.9C8 15.9 10.9 15.9 13 15.8C13.4 15.8 14.2 15.8 15 15C15.6 14.4 15.8 13 15.8 13C15.8 13 16 11.4 16 9.8V8C16 6.4 15.8 4.8 15.8 4.8ZM6.4 10.8V5.2L10.6 8L6.4 10.8Z" fill="currentColor"/>
             </svg>
           </button>
-        ` : ''}
+        ` : '<span></span>'}
       </div>
     `).join('');
 
@@ -224,7 +222,14 @@ class ArtistModal {
           <span class="album-year">${album.intYearReleased || ''}</span>
         </div>
         <div class="album-tracks">
-          ${tracksHTML}
+          <div class="album-tracks-header">
+            <span>Track</span>
+            <span>Time</span>
+            <span>Link</span>
+          </div>
+          <div class="album-tracks-list">
+            ${tracksHTML}
+          </div>
         </div>
       </div>
     `;
