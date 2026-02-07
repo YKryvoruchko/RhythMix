@@ -1,0 +1,437 @@
+/*--------- ARTIST MODAL BACKDROP ---------*/
+
+.artist-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-y: auto;
+    padding: 64px;
+}
+
+/*
+.artist-modal-backdrop.is-hidden-modal {
+    opacity: 0;
+    pointer-events: none;
+}
+*/
+
+/* --------- ARTIST MODAL ---------*/
+.artist-modal {
+    background-color: #060307;
+    color: #ffffff;
+
+    min-width: 288px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    border-radius: 16px;
+    padding: 52px 8px;
+    position: relative;
+}
+
+/* ----- ARTIST MODAL CLOSE BUTTON ----- */
+.artist-modal-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.artist-modal-close:hover {
+    opacity: 0.6;
+}
+
+.artist-modal-close:focus {
+    opacity: 0.6;
+}
+
+/* ----- ARTIST MODAL HEADER ----- */
+.artist-modal-header {
+    margin-bottom: 16px;
+}
+
+.artist-modal-title {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #fff;
+}
+
+/* ----- ARTIST MODAL MAIN CONTENT ----- */
+.artist-modal-content {
+    max-width: 272px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* --- ARTIST MODAL IMAGE --- */
+.artist-modal-image-wrapper {
+    border-radius: 16px;
+    width: 272px;
+    height: 167px;
+    border: #fff solid 2px;
+}
+
+.artist-modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* --- ARTIST MODAL META --- */
+.artist-modal-meta {
+    display: grid;
+    grid-template-columns: 272px;
+    grid-template-rows: 54px 54px 54px 54px 324px 80px;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+}
+
+.artist-modal-years-item {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.artist-modal-sex-item {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.artist-modal-members-item {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.artist-modal-country-item {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.artist-modal-bio {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.artist-modal-genres {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.artist-modal-meta-label {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    object-fit: cover;
+}
+
+.artist-modal-meta-value {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    object-fit: cover;
+}
+
+.artist-modal-bio-title {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    object-fit: cover;
+}
+
+.artist-modal-bio-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    object-fit: cover;
+    height: 100%;
+}
+
+.artist-modal-genres-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    object-fit: cover;
+}
+
+.artist-modal-genres-item {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    object-fit: cover;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0px 10px;
+    height: 32px;
+    line-height: 32px;
+
+    background: rgba(255, 255, 255, 0);
+}
+
+
+
+/*--- ARTIST MODAL ALBUMS ---*/
+
+.artist-modal-albums {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: start;
+    }
+
+.artist-bio,
+.artist-albums {
+    grid-column: span 2;
+}
+
+.modal-album-track-youtube:hover {
+    opacity: 0.6;
+}
+
+.modal-album-track-youtube:focus {
+    opacity: 0.6;
+}
+
+.modal-album-title {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.modal-album-tracks-header {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.modal-album-track-name {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.modal-album-track-duration {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* ===== TABLET ===== */
+
+@media (min-width: 768px) {
+    .artist-modal {
+        width: 702px;
+        margin: 0 auto;
+        border-radius: 16px;
+        padding: 64px 24px;
+    }
+
+    .artist-modal-header {
+        margin-bottom: 48px;
+    }
+
+    .artist-modal-title {
+        font-size: 32px;
+    }
+
+    .artist-modal-content {
+        max-width: 654px;
+    }
+
+    .artist-modal-image-wrapper {
+        border-radius: 16px;
+        width: 100%;
+        height: 402px;
+    }
+
+    .artist-modal-meta-row-one {
+        display: grid;
+        grid-template-columns: 146px 484px;
+        grid-template-rows: 54px;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
+    }
+
+    .artist-modal-years-item {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .artist-modal-sex-item {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .artist-modal-meta-row-two {
+        display: grid;
+        grid-template-columns: 146px 484px;
+        grid-template-rows: 54px;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
+    }
+
+    .artist-modal-members-item {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .artist-modal-country-item {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .artist-modal-meta {
+        display: grid;
+        grid-template-columns: 654px;
+        grid-template-rows: 54px 54px 135px 32px;
+        grid-column-gap: 0px;
+        grid-row-gap: 24px;
+    }
+
+    .artist-modal-meta-row-one {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .artist-modal-meta-row-two {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .artist-modal-bio {
+        grid-area: 3 / 1 / 4 / 2;
+        height: 135px;
+    }
+
+    .artist-modal-genres {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    /*.artist-modal-meta {
+        display: grid;
+        grid-template-columns: 146px 484px;
+        grid-template-rows: 54px 54px 135px 32px;
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        align-items: start;
+        justify-items: start;
+    }
+
+    .artist-modal-years-item { grid-area: 1 / 1 / 2 / 2; }
+    .artist-modal-sex-item { grid-area: 1 / 2 / 2 / 3; }
+    .artist-modal-members-item { grid-area: 2 / 1 / 3 / 2; }
+    .artist-modal-country-item { grid-area: 2 / 2 / 3 / 3; }
+    .artist-modal-bio-item { grid-area: 3 / 1 / 4 / 3; }
+    .artist-modal-genres-item { grid-area: 4 / 1 / 5 / 3; } */
+}
+
+/* ===== DESKTOP ===== */
+
+@media (min-width: 1440px) {
+    .artist-modal {
+        width: 1312px;
+        margin: 0 auto;
+        border-radius: 16px;
+        padding: 64px;
+    }
+
+    .artist-modal-header {
+        margin-bottom: 48px;
+    }
+
+    .artist-modal-title {
+        font-size: 32px;
+    }
+
+    .artist-modal-content {
+        display: grid;
+        grid-template-columns: repeat(2, 576px);
+        grid-template-rows: 374px;
+        grid-column-gap: 32px;
+        grid-row-gap: 0px;
+
+        /*display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        gap: 32px;
+        width: 1184px;*/
+    }
+
+    .artist-modal-meta-row-one {
+        display: grid;
+        grid-template-columns: 146px 406px;
+        grid-template-rows: 54px;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
+    }
+
+    .artist-modal-years-item {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .artist-modal-sex-item {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .artist-modal-meta-row-two {
+        display: grid;
+        grid-template-columns: 146px 406px;
+        grid-template-rows: 54px;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
+    }
+
+    .artist-modal-members-item {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .artist-modal-country-item {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .artist-modal-image-wrapper {
+        border-radius: 16px;
+        width: 576px;
+        height: 354px;
+    }
+
+    .artist-modal-meta-wrapper {
+        width: 576px;
+    }
+
+    .artist-modal-meta {
+        display: grid;
+        grid-template-columns: 576px;
+        grid-template-rows: 54px 54px 135px 32px;
+        grid-column-gap: 0px;
+        grid-row-gap: 24px;
+    }
+}
+    

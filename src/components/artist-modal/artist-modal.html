@@ -1,92 +1,97 @@
-<!--------- ARTIST MODAL BACKDROP --------->
-<div class="artist-modal-backdrop is-hidden-modal" data-modal-backdrop>
-    
-    <!----- ARTIST MODAL ----->
-    <div class="artist-modal"
-         role="dialog"
-         aria-modal="true"
-         aria-labelledby="artist-modal-title"
-         tabindex="-1"
-         data-artist-modal
-        >
-        <!----- ARTIST MODAL CLOSE BUTTON ----->
-        <button
-             type="button"
-             class="artist-modal-close"
-             aria-label="Close artist details"
-             data-modal-close
-            >
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.866 13.3946L13.3945 13.866C13.1342 14.1263 12.7121 14.1263 12.4517 13.866L7.03064 8.44484L1.60944 13.8659C1.34914 14.1263 0.927022 14.1263 0.666672 13.8659L0.195262 13.3945C-0.0650875 13.1342 -0.0650875 12.7121 0.195262 12.4517L5.61644 7.03064L0.195262 1.60944C-0.0650875 1.34914 -0.0650875 0.927022 0.195262 0.666672L0.666662 0.195272C0.927012 -0.065078 1.34914 -0.065078 1.60944 0.195272L7.03064 5.61644L12.4517 0.195262C12.7121 -0.0650875 13.1342 -0.0650875 13.3945 0.195262L13.866 0.666662C14.1263 0.927012 14.1263 1.34914 13.866 1.60944L8.44484 7.03064L13.866 12.4517C14.1263 12.7121 14.1263 13.1342 13.866 13.3946Z" fill="white" />
-            </svg>
-        </button>
+<section class="artist-modal-section" id="artist-modal-section">
         
-        <!----- ARTIST MODAL HEADER ----->
-        <div class="artist-modal-header">
-           <p class="artist-modal-title" id="artist-modal-title">
-              Artist Name
-           </p>
-        </div>
-
-        <!----- ARTIST MODAL MAIN CONTENT ----->
-        <div class="artist-modal-content">
+    <!--------- ARTIST MODAL BACKDROP --------->
+    <div class="artist-modal-backdrop is-hidden-modal" data-modal-backdrop>
             
-            <!--- ARTIST MODAL IMAGE --->
-            <div class="artist-modal-image-wrapper">
-               <img
-                  src=""
-                  alt="Artist modal photo"
-                  class="artist-modal-image"
-                  data-artist-image
-               />
+        <!--------- ARTIST MODAL --------->
+        <div class="artist-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="artist-modal-title"
+            tabindex="-1"
+            data-artist-modal
+            >
+            <!----- ARTIST MODAL CLOSE BUTTON ----->
+            <button
+                type="button"
+                class="artist-modal-close"
+                aria-label="Close artist details" 
+                data-modal-close>
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.866 13.3946L13.3945 13.866C13.1342 14.1263 12.7121 14.1263 12.4517 13.866L7.03064 8.44484L1.60944 13.8659C1.34914 14.1263 0.927022 14.1263 0.666672 13.8659L0.195262 13.3945C-0.0650875 13.1342 -0.0650875 12.7121 0.195262 12.4517L5.61644 7.03064L0.195262 1.60944C-0.0650875 1.34914 -0.0650875 0.927022 0.195262 0.666672L0.666662 0.195272C0.927012 -0.065078 1.34914 -0.065078 1.60944 0.195272L7.03064 5.61644L12.4517 0.195262C12.7121 -0.0650875 13.1342 -0.0650875 13.3945 0.195262L13.866 0.666662C14.1263 0.927012 14.1263 1.34914 13.866 1.60944L8.44484 7.03064L13.866 12.4517C14.1263 12.7121 14.1263 13.1342 13.866 13.3946Z" fill="white" />
+                </svg>
+            </button>
+            <!----- ARTIST MODAL HEADER ----->
+            <div class="artist-modal-header">
+                <p class="artist-modal-title" id="artist-modal-title">Artist Name</p>
             </div>
-            
-            <!--- ARTIST MODAL META --->
-            <div>
-                <ul class="artist-modal-meta">
-                    <li class="artist-modal-meta-item">
-                        <span class="artist-modal-meta-label">Years active:</span>
-                        <span class="artist-modal-meta-value" data-artist-years>
-                          information missing
-                        </span>
-                    </li>
 
-                    <li class="artist-modal-meta-item">
-                        <span class="artist-modal-meta-label">Sex:</span>
-                        <span class="artist-modal-meta-value" data-artist-gender></span>
-                    </li>
-
-                    <li class="artist-modal-meta-item">
-                        <span class="artist-modal-meta-label">Members:</span>
-                        <span class="artist-modal-meta-value" data-artist-members></span>
-                    </li>
-
-                    <li class="artist-modal-meta-item">
-                        <span class="artist-modal-meta-label">Country:</span>
-                        <span class="artist-modal-meta-value" data-artist-country></span>
-                    </li>
-                </ul>
-
-                <!--- ARTIST MODAL BIOGRAPHY --->
-                <div class="artist-modal-bio">
-                    <p class="artist-modal-bio_title">Biography</p>
-                    <p class="artist-modal-bio_text" data-artist-bio></p>
+            <!----- ARTIST MODAL MAIN CONTENT ----->
+            <div class="artist-modal-content">
+                    
+                <!--- ARTIST MODAL IMAGE --->
+                <div class="artist-modal-image-wrapper">
+                    <img
+                        src=""
+                        alt="Artist modal photo"
+                        class="artist-modal-image"
+                        data-artist-image
+                    />
                 </div>
-                
-                <!--- ARTIST MODAL GENRES --->
-                <div class="artist-modal-genres">
-                        <ul class="artist-modal-genres-list" data-artist-genres>
-                        <li class="artist-modal-genres-item">Rock</li>
-                    </ul>
-                </div>                
+                    
+                <!--- ARTIST MODAL META --->
+                <div class="artist-modal-meta-wrapper">
+
+                    <ul class="artist-modal-meta">
+
+                        <div class="artist-modal-meta-row-one">
+                            <li class="artist-modal-years-item">
+                                <p class="artist-modal-meta-label">Years active:</p>
+                                <p class="artist-modal-meta-value" data-artist-years>information missing</p>
+                            </li>
+    
+                            <li class="artist-modal-sex-item">
+                                <p class="artist-modal-meta-label">Sex</p>
+                                <p class="artist-modal-meta-value" data-artist-gender></p>
+                            </li>
+                        </div>
+
+                        <div class="artist-modal-meta-row-two">
+                            <li class="artist-modal-members-item">
+                                <p class="artist-modal-meta-label">Members:</p>
+                                <p class="artist-modal-meta-value" data-artist-members></p>
+                            </li>
+    
+                            <li class="artist-modal-country-item">
+                                <p class="artist-modal-meta-label">Country:</p>
+                                <p class="artist-modal-meta-value" data-artist-country></p>
+                            </li>
+                        </div>
+
+                        <!--- ARTIST MODAL BIOGRAPHY --->
+                        <li class="artist-modal-bio">
+                            <p class="artist-modal-bio-title">Biography</p>
+                            <p class="artist-modal-bio-text" data-artist-bio></p>
+                        </li>
+                            
+                        <!--- ARTIST MODAL GENRES --->
+                        <li class="artist-modal-genres">
+                            <ul class="artist-modal-genres-list" data-artist-genres>
+                                <li class="artist-modal-genres-item"></li>
+                            </ul>
                                 
+                        </li>
+
+                    </ul>
+                </div>
             </div>
+
             <!--- ARTIST MODAL ALBUMS --->
             <div class="artist-modal-albums" data-artist-albums>
                 
                 <!--- ARTIST MODAL ALBUM --->
                 <div class="modal-album">
-                    <p class="modal-album-title">Album title</p>
+                    <p class="modal-album-title">Albums</p>
 
                     <div class="modal-album-tracks">
                         <div class="modal-album-tracks-header">
@@ -116,8 +121,9 @@
 
                     </div>
                 </div>
-            </div>        
 
-        </div>
+            </div>
+
+        </div>   
     </div>
-</div>
+</section>
