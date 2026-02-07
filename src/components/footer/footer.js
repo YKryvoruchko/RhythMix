@@ -1,4 +1,4 @@
-import spriteUrl from '../../img/rhythmix-sprite-symbol-defs.svg?url';
+const spriteUrl = `${import.meta.env.BASE_URL}img/rhythmix-sprite-symbol-defs.svg`;
 
 const useEl = document.querySelector('.footer-logo-use');
 
