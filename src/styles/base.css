@@ -172,13 +172,13 @@ a {
 
 @media (min-width: 768px) {
   .section {
-    padding: var(--section-py) 0;
+    padding: var(--section-py);
   }
 }
 
 @media (min-width: 1440px) {
   .section {
-    padding: var(--section-py-lg) 0;
+    padding: var(--section-py-lg);
   }
 }
 
