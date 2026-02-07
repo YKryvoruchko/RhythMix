@@ -3,6 +3,8 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'css-star-rating/css/star-rating.css';
 
+const leftArrowUrl = `${import.meta.env.BASE_URL}img/feedback/icon-arrow-left.svg`;
+const rightArrowUrl = `${import.meta.env.BASE_URL}img/feedback/icon-arrow-right.svg`;
 const API_URL = 'https://sound-wave.b.goit.study/api/feedbacks';
 const FEEDBACK_LIMIT = 10;
 
@@ -15,7 +17,23 @@ const refs = {
   dots: Array.from(document.querySelectorAll('.feedback-pagination .dot')),
 };
 
+setArrowIcons();
 initFeedback();
+
+function setArrowIcons() {
+  const prevUse = document.querySelector('.feedback-arrow--prev use');
+  const nextUse = document.querySelector('.feedback-arrow--next use');
+
+  if (prevUse) {
+    prevUse.setAttribute('href', leftArrowUrl);
+    prevUse.setAttribute('xlink:href', leftArrowUrl);
+  }
+
+  if (nextUse) {
+    nextUse.setAttribute('href', rightArrowUrl);
+    nextUse.setAttribute('xlink:href', rightArrowUrl);
+  }
+}
 
 async function initFeedback() {
   if (!refs.wrapper || !refs.slidesEl) return;
