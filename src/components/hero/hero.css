@@ -1,5 +1,5 @@
 .hero {
-    background-color: #23132B;
+    /* background-color: #23132B; */
     background-size: cover;
     min-height: 800px;
     display: flex;
@@ -7,16 +7,20 @@
 
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom,
-                rgba(35, 19, 43, 0) 0%,
-                /* Сверху полностью прозрачно */
-                rgba(35, 19, 43, 0.2) 1%,
-                /* Очень легкий оттенок на 20% высоты */
-                rgba(35, 19, 43, 0.8) 10%,
-                /* Начинает густеть только к концу картинок */
-                #23132B 100%
-                /* Полностью плотный фон в самом низу */
-            );
+    
+    background-color: #060307;
+    
+        background: linear-gradient(to bottom,
+                    #060307 0%,
+                    #0e0811 1%,
+                    /* Промежуточный темный оттенок */
+                    #23132B 8%,
+                    /* Мягкий вход в основной цвет */
+                    #23132B 92%,
+                    /* Основная зона фиолетового */
+                    #0e0811 98.5%,
+                    /* Промежуточный оттенок перед черным */
+                    #060307 100%);
 }
 
 .hero-container {
@@ -75,7 +79,6 @@
 }
 
 .hero-image {
-    position: relative;
     display: inline-block;
     position: relative;
     -webkit-mask-image:
@@ -89,8 +92,7 @@
 .hero-image img {
   display: block;
   width: 641px; 
-  height: 900px; 
-  object-fit: cover;
+  border-radius: inherit;
 }
 
 
@@ -103,6 +105,8 @@
         }
         .hero-container {
             flex-wrap: wrap;
+            gap: 32px;
+            padding-top: 32px;
         }
         .hero-content {
             min-width: 624px;
@@ -132,9 +136,33 @@
         }
         .hero-image {
             order: 2;
+            position: relative;
+            display: inline-block;
+            -webkit-mask-image: linear-gradient(to bottom,
+                        black 0%,
+                        /* Верх картинки полностью виден */
+                        black 75%,
+                        /* Картинка остается четкой до 75% высоты */
+                        rgba(0, 0, 0, 0.7) 85%,
+                        /* Первое легкое растворение */
+                        rgba(0, 0, 0, 0.3) 93%,
+                        /* Становится почти прозрачной */
+                        transparent 100%
+                        /* Полное исчезновение в самом низу */
+                    );
+                mask-image: linear-gradient(to bottom,
+                        black 0%,
+                        black 75%,
+                        rgba(0, 0, 0, 0.7) 85%,
+                        rgba(0, 0, 0, 0.3) 93%,
+                        transparent 100%);
+                -webkit-mask-composite: source-in;
+                mask-composite: intersect;
         }
-}
-
+        .hero-image img {
+            border-top-right-radius: 18px;
+        }
+    }
 @media screen and (max-width: 320px) {
     .hero-title {
         font-family: 'Epilogue', sans-serif;
@@ -165,7 +193,27 @@
        max-width: 288px;
     }
 
-        .btn-explore {
-            min-width: 288px;
+    .btn-explore {
+        min-width: 288px;
+    }
+    .hero-image img {
+        width: 280px;
+        height: 385px;
+    }
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-content {
+        order: 1;
+        margin-bottom: 64px;
         }
+    
+    .hero-image {
+        order: 2;
+    }
+    .hero-image img {
+        border-radius: inherit;
+    }
 }

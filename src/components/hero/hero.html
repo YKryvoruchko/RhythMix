@@ -13,11 +13,16 @@
             </button>
         </div>
         <div class="hero-image">
-            <img src="../../img/hero/Content.jpg" alt="hero-img"  />
+            <picture>
+            <source srcset="../../img/hero/hero-desk-x1.jpg 1x, ../../img/hero/hero-desk-x2.jpg 2x" media="(min-width: 1440px)" />
+            <source srcset="../../img/hero/hero-tab-x1.jpg 1x, ../../img/hero/hero-tab-x2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="../../img/hero/hero-mob-x1.jpg 1x, ../../img/hero/hero-mob-x2.jpg 2x" media="(max-width: 767px)" /> 
+            <img src="../../img/hero/hero-desk-x1.jpg" alt="hero-img" />
+            </picture>
         </div>
 
     <!-- <picture>
-        <source srcset="./images/img10.jpg 1x, ./images/img10-2x.jpg 2x" media="(min-width: 1158px)" />
+        <source srcset="./images/img10.jpg 1x, ./images/img10-2x.jpg 2x" media="(min-width: 1440px)" />
         <source srcset="./images/img10-tab.jpg 1x, ./images/img10-tab-2x.jpg 2x" media="(min-width: 768px)" />
         <source srcset="./images/img10-mob.jpg 1x, ./images/img10-mob-2x.jpg 2x" media="(max-width: 767px)" />
         <img class="portfolio-img" src="./images/img10.jpg" alt="Online Courses" height="300" />
