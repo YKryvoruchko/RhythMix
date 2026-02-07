@@ -3,31 +3,18 @@
     <div class="about-image">
       <picture>
         <source
-          srcset="
-            /src/img/layout/layout-c1.jpg    1x,
-            /src/img/layout/layout-c1@2x.jpg 2x
-          "
-          media="(min-width: 1280px)"
+          srcset="/img/layout/layout-c1.jpg 1x, /img/layout/layout-c1@2x.jpg 2x"
+          media="(min-width: 1440px)"
         />
 
         <source
-          srcset="
-            /src/img/layout/layout-p1.jpg    1x,
-            /src/img/layout/layout-p1@2x.jpg 2x
-          "
+          srcset="/img/layout/layout-p1.jpg 1x, /img/layout/layout-p1@2x.jpg 2x"
           media="(min-width: 768px)"
         />
 
-        <source
-          srcset="
-            /src/img/layout/layout-m1.jpg    1x,
-            /src/img/layout/layout-m1@2x.jpg 2x
-          "
-          media="(max-width: 767px)"
-        />
-
         <img
-          src="/src/img/layout/layout-m1.jpg"
+          src="/img/layout/layout-m1.jpg"
+          srcset="/img/layout/layout-m1@2x.jpg 2x"
           alt="ArtistsHub team"
           class="about-team"
         />
@@ -37,7 +24,7 @@
     <div class="about-content">
       <div class="about-logo">
         <svg class="about-logo-icon">
-          <use href="/src/img/loyout/logo-icon.svg#logo"></use>
+          <use class="about-logo-use"></use>
         </svg>
       </div>
 
