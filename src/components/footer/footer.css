@@ -1,7 +1,3 @@
-/* .footer {
-    background-color: #060307;
-} */
-
 .footer-section {
   padding: 48px 0;
 }
@@ -162,13 +158,11 @@
     align-items: center;
   }
 
-  /* copyright left */
   .footer-copy {
     order: 1;
     text-align: left;
   }
 
-  /* socials right */
   .socials {
     order: 2;
   }
@@ -189,21 +183,17 @@
   }
 }
 
-/* ===== DESKTOP (>=1440px) ===== */
-
 @media (min-width: 1440px) {
-  /* socials left */
   .socials {
-    order: 1;
+    order: 2;
   }
 
   .socials-list {
     justify-content: flex-start;
   }
 
-  /* copyright right */
   .footer-copy {
-    order: 2;
+    order: 1;
     text-align: right;
   }
 }
