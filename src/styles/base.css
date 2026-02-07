@@ -37,6 +37,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-base);
   font-weight: 400;
@@ -168,13 +172,13 @@ a {
 
 @media (min-width: 768px) {
   .section {
-    padding: var(--section-py);
+    padding: var(--section-py) 0;
   }
 }
 
 @media (min-width: 1440px) {
   .section {
-    padding: var(--section-py-lg);
+    padding: var(--section-py-lg) 0;
   }
 }
 
