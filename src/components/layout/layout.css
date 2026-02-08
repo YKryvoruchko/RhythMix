@@ -1,81 +1,115 @@
+/* =======================
+   ABOUT — MOBILE (default)
+   ======================= */
+
 .about {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    background: #060307;
-    padding: 64px 16px;
-    width: 320px;
-    height: 716px;
+  background-color: #060307;
+  padding: 64px 16px;
 }
 
 .about-inner {
-    width: 320px;
-    height: 716px;
-    padding: 64px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 48px;
+  max-width: 320px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* IMAGE */
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* CONTENT */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-logo {
+  margin-bottom: 16px;
+}
+
+.about-logo-icon {
+  width: 64px;
+  height: 64px;
+  fill: #ffffff;
 }
 
 .about-title {
-    font-family: "Epilogue", sans-serif;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 1.2;
-    text-align: left;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.about-text {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: left;
-    color: #fff;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.about-logo-icon {
-    width: 64px;
-    height: 64px;
+.about-text {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
 }
+
+/* =======================
+   TABLET ≥ 768px
+   ======================= */
 
 @media screen and (min-width: 768px) {
-.about-inner {
+  .about {
     padding: 64px 32px;
-    width: 768px;
-    height: 836px;
-    gap: 80px;
-    align-items: center;
+  }
 
+  .about-inner {
+    max-width: 768px;
+    gap: 48px;
+  }
 
-}
-.about-title { 
-    font-size: 44px;
-}
-
-.about-text { 
-    font-size: 20px;
-}
-.about-logo-icon {
+  .about-logo-icon {
     width: 80px;
     height: 80px;
+  }
+
+  .about-title {
+    font-size: 44px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
 }
 
-}
-
+/* =======================
+   DESKTOP ≥ 1440px
+   ======================= */
 
 @media screen and (min-width: 1440px) {
-
-.about-inner {
+  .about {
     padding: 112px 64px;
-    width: 1440px;
-    height: 888px;
-}
-.about-title { 
-    font-size: 60px;
-}
+  }
 
+  .about-inner {
+    max-width: 1440px;
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .about-image,
+  .about-content {
+    flex: 1;
+  }
+
+  .about-title {
+    font-size: 60px;
+  }
 }
