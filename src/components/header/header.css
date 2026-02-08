@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 
@@ -34,7 +35,7 @@ html {
 .header-logo-icon {
   display: block;
   width: 106px;
-  height: 31px;
+  height: 30px;
   color: #fff;
 }
 
@@ -116,10 +117,11 @@ html {
     display: flex;
     position: fixed;
     inset: 0;
-    background: #0b0b0f;
+    background: #000000;
     z-index: 50;
 
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 120px;
     justify-content: center;
     text-align: center;
   }
@@ -162,7 +164,7 @@ html {
     display: block;
     color: #fff;
     fill: currentColor;
-    
+
   }
 
   /* список у центрі */
@@ -173,14 +175,15 @@ html {
 
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
   }
 
   .mobile-navigation-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 28px;
-    line-height: 1.1;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 150%;
+    color: var(--color-scheme-1-text);
   }
 
   .mobile-navigation-link:focus-visible,
