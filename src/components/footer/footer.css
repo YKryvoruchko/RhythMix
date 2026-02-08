@@ -8,11 +8,7 @@
   }
 }
 
-/* ================= CONTAINER ================= */
-
-.footer-container {
-  padding: 0 16px;
-}
+/*  CONTAINER  */
 
 @media (min-width: 768px) {
   .footer-container {
@@ -26,7 +22,7 @@
   }
 }
 
-/* ================= TOP ================= */
+/*  TOP  */
 
 .footer-top {
   display: flex;
@@ -76,7 +72,7 @@
   }
 }
 
-/* ================= DIVIDER ================= */
+/*  DIVIDER  */
 
 .footer-divider {
   margin: 32px 0;
@@ -91,7 +87,7 @@
   }
 }
 
-/* ================= BOTTOM ================= */
+/*  BOTTOM  */
 
 .footer-bottom {
   display: flex;
@@ -100,14 +96,18 @@
   gap: 24px;
 }
 
+
+.socials {
+  order: 1;
+}
+
 .footer-text {
+  order: 2;
   margin: 0;
   color: #ffffff;
   opacity: 0.85;
   text-align: center;
 }
-
-/* ================= SOCIALS ================= */
 
 .socials-list {
   list-style: none;
@@ -132,21 +132,21 @@
   fill: currentColor;
 }
 
-/* ================= TABLET+ ================= */
 
 @media (min-width: 768px) {
   .footer-bottom {
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
   .footer-text {
+    order: 1;
     text-align: left;
   }
 
   .socials {
-    margin-left: auto;
-    /* ✅ THIS IS THE FIX */
+    order: 2;
   }
 
   .socials-list {
@@ -165,10 +165,19 @@
   }
 }
 
-/* ================= DESKTOP ================= */
 
 @media (min-width: 1440px) {
+
+  .socials {
+    order: 1;
+  }
+
+  .footer-text {
+    order: 2;
+    text-align: right;
+  }
+
   .socials-list {
-    gap: 24px;
+    justify-content: flex-start;
   }
 }
