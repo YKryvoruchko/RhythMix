@@ -71,7 +71,7 @@ html {
 }
 
 /* мобільна */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .header-navigation {
     height: 72px;
     padding: 20px 20px;
