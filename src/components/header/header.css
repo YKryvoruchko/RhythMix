@@ -94,6 +94,7 @@ html {
     justify-content: center;
     text-decoration: none;
     color: #fff;
+    margin: 0;
   }
 
   .burger-icon {
@@ -152,6 +153,7 @@ html {
     justify-content: center;
     text-decoration: none;
     color: #fff;
+    margin: 0;
   }
 
   .icon-x {
@@ -160,6 +162,7 @@ html {
     display: block;
     color: #fff;
     fill: currentColor;
+    
   }
 
   /* список у центрі */
