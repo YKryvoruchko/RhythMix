@@ -13,6 +13,8 @@
 
 .feedback {
   position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .feedback__wrapper {
@@ -87,6 +89,12 @@
 }
 
 @media (min-width: 768px) {
+
+  .feedback{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .feedback-text {
     font-size: 26px;
   }
@@ -170,6 +178,12 @@
 }
 
 @media (min-width: 1440px) {
+
+  .feedback{
+    padding-left:64px;
+    padding-right: 64px;
+  }
+
   .feedback-swiper {
     max-width: 866px;
     max-height: 236px;
