@@ -1,4 +1,4 @@
-const spriteUrl = `${import.meta.env.BASE_URL}img/rhythmix-sprite-symbol-defs.svg`;
+import spriteUrl from '../../img/rhythmix-sprite-symbol-defs.svg';
 
 const logoUseEls = document.querySelectorAll('.header-logo-use');
 const headerEl = document.querySelector('.header');

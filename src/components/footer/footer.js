@@ -1,5 +1,12 @@
-import spriteUrl from '../../img/rhythmix-sprite-symbol-defs.svg?url';
+import spriteUrl from '../../img/rhythmix-sprite-symbol-defs.svg';
 
-const useEl = document.querySelector('.footer-logo-use');
-useEl.setAttribute('href', `${spriteUrl}#icon-logo-2`);
-useEl.setAttribute('xlink:href', `${spriteUrl}#icon-logo-2`);
+// логотип
+document.querySelectorAll('.footer-logo-use').forEach(el => {
+  el.setAttribute('href', `${spriteUrl}#icon-logo-2`);
+});
+
+// соцсети
+document.querySelectorAll('.socials-icon use').forEach(el => {
+  const icon = el.dataset.icon;
+  el.setAttribute('href', `${spriteUrl}#icon-${icon}`);
+});
