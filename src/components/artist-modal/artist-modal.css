@@ -461,7 +461,8 @@ color: var(--color-scheme-1-text);
 
 @media (min-width: 768px) {
     .artist-modal {
-        max-width: 600px;
+        width: 704px;
+        max-width: 704px;
         padding: 48px 32px;
     }
 
@@ -471,6 +472,12 @@ color: var(--color-scheme-1-text);
 
     .artist-modal-content {
         gap: 32px;
+    }
+
+    .artist-modal-image-wrapper {
+        width: 654px;
+        height: 402px;
+        aspect-ratio: auto;
     }
 
     .artist-modal-meta-row-one,
@@ -490,8 +497,21 @@ color: var(--color-scheme-1-text);
         font-size: 15px;
     }
 
+    .artist-modal-albums {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        margin-top: 52px;
+    }
+
+    .artist-modal-albums::before {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
+    }
+
     .album-item {
-        padding: 20px;
+        padding: 16px 8px;
+        margin-bottom: 0;
     }
 }
 
@@ -499,7 +519,8 @@ color: var(--color-scheme-1-text);
 
 @media (min-width: 1440px) {
     .artist-modal {
-        max-width: 900px;
+        width: 1312px;
+        max-width: 1312px;
         padding: 64px 48px;
     }
 
@@ -511,6 +532,9 @@ color: var(--color-scheme-1-text);
 
     .artist-modal-image-wrapper {
         grid-row: 1 / 3;
+        width: 576px;
+        height: 354px;
+        aspect-ratio: auto;
     }
 
     .artist-modal-meta-wrapper {
@@ -519,5 +543,19 @@ color: var(--color-scheme-1-text);
 
     .artist-modal-albums {
         grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        margin-top: 52px;
+    }
+
+    .artist-modal-albums::before {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
+    }
+
+    .album-item {
+        padding: 16px 8px;
+        margin-bottom: 0;
     }
 }
