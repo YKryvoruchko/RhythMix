@@ -126,6 +126,12 @@
   color: var(--text);
 }
 
+.socials-link:hover,
+.socials-link:focus {
+  color: #764191;
+  transform: translateY(-2px);
+}
+
 .socials-icon {
   width: 40px;
   height: 40px;
