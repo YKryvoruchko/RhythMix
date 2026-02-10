@@ -1,11 +1,10 @@
-/* ========== SECTION ========== */
+/* ========== SECTION ARTISTS========== */
    
 .artists__container {
-        max-width: 1440px;
+        max-width: 367px;
         margin: 0 auto;
         padding: 64px 16px;
-        
-}
+    }
 
 .artists__heading {
     margin-bottom: 32px;
@@ -25,10 +24,11 @@
     font-weight: 700;
     line-height: 1.2;
     color: #fff;
+    letter-spacing: -0.01em;
     word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 100%;
-        display: block;
+    overflow-wrap: break-word;
+    max-width: 288px;
+    display: block;
 }
 
 /* ========== LIST ========== */
@@ -46,13 +46,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* background: linear-gradient(180deg, #0b0b0b 0%, #000 100%);
-    padding: 12px; */
 }
 
 .artist-card__image {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 288 / 177;
     border-radius: 16px;
     overflow: hidden;
     border-radius: 16px
@@ -96,7 +94,6 @@
 .artist-card__description {
     font-size: 14px;
     color: #bdbdbd;
-    /* margin-top: 12px; */
     margin: 0;
     overflow: hidden;
     display: -webkit-box;
@@ -122,14 +119,17 @@
 
 @media (min-width: 768px) {
     .artists__container {
+        max-width: 768px;
         padding: 80px 32px;
     }
 
     .artists__subtitle {
         font-size: 44px;
-        max-width: 520px;
+        max-width: 600px;
     }
-
+    .artist-card__image {
+    aspect-ratio: 704 / 433;
+    }
     .artists__list {
     width: 100%;
     margin: 0 auto;
@@ -137,13 +137,11 @@
 
 }
 
-
 /* ========== DESKTOP (1440px) ========== */
 
 @media (min-width: 1440px) {
     .artists__container {
-        max-width: 1440px;
-        margin: 0 auto;
+        max-width: 1440px;  
         padding: 112px 64px;
     }
 
@@ -153,18 +151,17 @@
     }
 
     .artists__list {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
-
-    .artist-card__image {
-        aspect-ratio: 16 / 9;
+        .artist-card__image{
+        aspect-ratio: 640/393;
     }
 
     .artist-card__name {
         font-size: 32px;
     }
+        
 }
 /* ===== LOAD MORE ===== */
 
