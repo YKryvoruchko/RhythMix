@@ -107,7 +107,7 @@ function buildStars() {
 function initSwiper() {
   if (!refs.swiperEl) return;
 
-  const swiper = new Swiper(refs.swiperEl, {
+  swiperInstance = new Swiper(refs.swiperEl, {
     modules: [Navigation],
     slidesPerView: 1,
     spaceBetween: 24,
@@ -116,13 +116,14 @@ function initSwiper() {
       nextEl: refs.nextBtn,
     },
     on: {
-      slideChange(swiperInstance) {
-        setPaginationState(swiperInstance.activeIndex, swiperInstance.slides.length);
+      slideChange(sw) {
+        setPaginationState(sw.activeIndex, sw.slides.length);
       },
     },
   });
 
-  setPaginationState(swiper.activeIndex, swiper.slides.length);
+  setPaginationState(swiperInstance.activeIndex, swiperInstance.slides.length);
+  bindDots(swiperInstance.slides.length);
 }
 
 function setPaginationState(activeIndex, total) {
@@ -147,7 +148,28 @@ function setPaginationState(activeIndex, total) {
 
   refs.dots[1]?.classList.add('is-active');
 }
+// -------- pagination ----------
+let swiperInstance = null;
 
+function bindDots() {
+  if (!refs.dots.length || !swiperInstance) return;
+
+  refs.dots[0].onclick = () => {
+    swiperInstance.slideTo(Math.max(swiperInstance.activeIndex - 1, 0));
+  };
+
+  refs.dots[1].onclick = () => {
+    swiperInstance.slideTo(swiperInstance.activeIndex);
+  };
+
+  refs.dots[2].onclick = () => {
+    swiperInstance.slideTo(
+      Math.min(swiperInstance.activeIndex + 1, swiperInstance.slides.length - 1)
+    );
+  };
+}
+
+// -----------------------------------
 function renderError(message) {
   refs.slidesEl.innerHTML = `
     <div class="swiper-slide feedback-card">

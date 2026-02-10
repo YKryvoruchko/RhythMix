@@ -89,8 +89,7 @@
 }
 
 @media (min-width: 768px) {
-
-  .feedback{
+  .feedback {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -178,9 +177,8 @@
 }
 
 @media (min-width: 1440px) {
-
-  .feedback{
-    padding-left:64px;
+  .feedback {
+    padding-left: 64px;
     padding-right: 64px;
   }
 
@@ -195,7 +193,7 @@
 }
 
 .feedback-arrow.swiper-button-disabled {
-  opacity: 0;
+  opacity: 0.3;
   pointer-events: none;
-  visibility: hidden;
+  cursor: default;
 }
