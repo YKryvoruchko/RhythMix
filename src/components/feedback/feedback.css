@@ -158,9 +158,9 @@
 }
 
 @media (min-width: 768px) {
-  .feedback__wrapper {
+  /* .feedback__wrapper {
     padding: 0 93px;
-  }
+  } */
 
   .feedback-swiper {
     max-width: 640px;
