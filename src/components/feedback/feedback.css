@@ -115,10 +115,17 @@
 }
 
 .feedback-pagination .dot {
+  position: relative;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
+}
+
+.feedback-pagination .dot::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 
 .feedback-pagination .dot.is-active {
