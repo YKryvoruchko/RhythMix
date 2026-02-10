@@ -62,6 +62,7 @@ class ArtistModal {
     this.backdrop.classList.remove('is-hidden');
     document.body.style.overflow = 'hidden';
     
+    this.clearContent();
     this.showLoader();
     
     try {
@@ -84,14 +85,63 @@ class ArtistModal {
   showLoader() {
     if (this.loader && this.content) {
       this.loader.style.display = 'flex';
-      this.content.style.display = 'none';
+      this.content.style.visibility = 'hidden';
+    }
+    if (this.elements.albumsList) {
+      this.elements.albumsList.style.visibility = 'hidden';
     }
   }
 
   hideLoader() {
     if (this.loader && this.content) {
       this.loader.style.display = 'none';
-      this.content.style.display = 'block';
+      this.content.style.visibility = 'visible';
+    }
+    if (this.elements.albumsList) {
+      this.elements.albumsList.style.visibility = 'visible';
+    }
+  }
+
+  clearContent() {
+    if (this.elements.image) {
+      this.elements.image.src = '';
+      this.elements.image.alt = 'Artist';
+    }
+
+    if (this.elements.name) {
+      this.elements.name.textContent = '';
+    }
+
+    if (this.elements.years) {
+      this.elements.years.textContent = 'information missing';
+    }
+
+    if (this.elements.sex) {
+      this.elements.sex.textContent = '';
+      const sexDetail = this.elements.sex.closest('.artist-modal-sex-item');
+      if (sexDetail) sexDetail.style.display = 'none';
+    }
+
+    if (this.elements.members) {
+      this.elements.members.textContent = '';
+      const membersDetail = this.elements.members.closest('.artist-modal-members-item');
+      if (membersDetail) membersDetail.style.display = 'none';
+    }
+
+    if (this.elements.country) {
+      this.elements.country.textContent = '';
+    }
+
+    if (this.elements.genres) {
+      this.elements.genres.innerHTML = '';
+    }
+
+    if (this.elements.biography) {
+      this.elements.biography.textContent = '';
+    }
+
+    if (this.elements.albumsList) {
+      this.elements.albumsList.innerHTML = '';
     }
   }
 
