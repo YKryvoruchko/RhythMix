@@ -11,13 +11,13 @@
 /*  CONTAINER  */
 
 @media (min-width: 768px) {
-  .footer-container {
+  .container {
     padding: 0 32px;
   }
 }
 
 @media (min-width: 1440px) {
-  .footer-container {
+  .container {
     padding: 0 64px;
   }
 }
