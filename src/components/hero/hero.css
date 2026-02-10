@@ -24,6 +24,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 64px;
 }
 
 .hero-content {
@@ -94,19 +95,23 @@
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     .hero {
-        padding-top: 72px;
+        /* padding-top: 128px; */
     }
     .hero-container {
         padding: 32px 32px 0 32px;
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 100%;
+        /* align-items: flex-start; */
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        max-width: 768px;
+        margin: 0 auto;
+        /* width: 100%; */
+        /* max-width: 100%; */
 
     }
     .hero-content {
         max-width: 640px;
-        width: 100%;
+        /* width: 100%; */
         max-width: none;
         margin-bottom: 32px;
     }
@@ -135,6 +140,7 @@
 
     .hero-image {
         width: 100%;
+        max-width: 640px;
         display: block;
         mask-image: linear-gradient(to bottom, black 0%, black 75%, rgba(0, 0, 0, 0.3) 93%, transparent 100%);
     }
@@ -150,21 +156,26 @@
  .hero {
     height: auto;
     min-height: auto;
+    padding-top: 128px;
  }
 
  .hero-container {
-    padding-top: 108px;
+    /* padding-top: 108px; */
+    padding: 64px 16px 0 16px;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 100%;
+    /* align-items: flex-start; */
+    gap: 64px;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    max-width: 320px;
+    margin: 0 auto;
  }
 
  .hero-title {
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     max-width: 288px;
     font: 700 48px / 1.1 "Epilogue", sans-serif;
  }
@@ -178,9 +189,10 @@
  }
 
  .hero-content {
-    width: 100%;
-    max-width: none;
-    margin-bottom: 64px;
+    max-width: 288px;
+    /* width: 100%; */
+    /* max-width: none; */
+    /* margin-bottom: 64px; */
  }
 
  .hero-title,
@@ -195,11 +207,12 @@
 
  .btn-explore {
     min-width: 288px;
-    margin-bottom: 0;
+    /* margin-bottom: 64px; */
  }
 
 .hero-image {
     width: 100%;
+    max-width: 288px;
     padding-top: 0;
     mask-image: linear-gradient(to bottom, black 0%, black 75%, rgba(0, 0, 0, 0.3) 93%, transparent 100%);
 }
