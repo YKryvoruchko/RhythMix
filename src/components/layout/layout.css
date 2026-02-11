@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 1440px) {
   .about {
-    padding: 112px 64px;
+    padding: 112px 0px;
   }
 
   .about-inner {
