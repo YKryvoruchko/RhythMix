@@ -98,32 +98,36 @@ RhythMix побудований за принципом:
 
 ---
 
-# 📂 Структура
-RhythMix
+## 📁 Структура проєкту
+
+```
+RhythMix/
 │
-├── .github/
-│ └── workflows/ # CI/CD конфігурації
+├── .github/                     # CI/CD та workflow конфігурації
+│   └── workflows/
 │
-├── assets/ # Статичні ресурси
-├── node_modules/ # Залежності (генеруються npm)
+├── assets/                      # Статичні ресурси
+├── node_modules/                # Залежності (генеруються автоматично)
 │
-└── src/ # Основний код застосунку
-│
-├── components/ # UI компоненти
-│ ├── artist-modal/ # Модальне вікно артиста
-│ ├── artists/ # Секція артистів
-│ ├── feedback/ # Блок відгуків
-│ ├── footer/ # Нижній колонтитул
-│ ├── header/ # Верхня панель
-│ ├── hero/ # Hero секція
-│ └── layout/ # Layout компоненти
-│
-├── img/ # Зображення
-│ ├── feedback/
-│ ├── hero/
-│ └── layout/
-│
-└── styles/ # Глобальні стилі
+└── src/                         # Основний код застосунку
+    │
+    ├── components/              # UI компоненти
+    │   ├── artist-modal/        # Модальне вікно артиста
+    │   ├── artists/             # Секція артистів
+    │   ├── feedback/            # Блок відгуків
+    │   ├── footer/              # Footer
+    │   ├── header/              # Header
+    │   ├── hero/                # Hero секція
+    │   └── layout/              # Layout компоненти
+    │
+    ├── img/                     # Зображення
+    │   ├── feedback/
+    │   ├── hero/
+    │   └── layout/
+    │
+    └── styles/                  # Глобальні стилі
+```
+
 
 # ⚙️ Встановлення та запуск
 
